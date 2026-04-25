@@ -44,6 +44,10 @@
         <ProjectReference Include="..\UniGetUI.PackageEngine.Managers.WinGet\UniGetUI.PackageEngine.Managers.WinGet.csproj" />
     </ItemGroup>
 
+    <ItemGroup Condition="'$(TargetFramework)' != '$(WindowsTargetFramework)'">
+        <ProjectReference Include="..\UniGetUI.PackageEngine.Managers.Snap\UniGetUI.PackageEngine.Managers.Snap.csproj" />
+    </ItemGroup>
+
     <ItemGroup>
         <Using Include="Xunit" />
     </ItemGroup>
